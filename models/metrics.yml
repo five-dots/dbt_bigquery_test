@@ -1,0 +1,11 @@
+version: 2
+
+metrics:
+  - name: unique_user
+    label: summary
+    model: ref("latlon2")
+    # description: "Average Sepal_Length by Species"
+    calculation_method: count_distinct
+    expression: adid
+    timestamp: date_time
+    time_grains: [day, week, month]
